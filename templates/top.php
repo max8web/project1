@@ -6,8 +6,10 @@
 		<meta name="description" content="Описание">
 		<meta name="keywords" content="Ключи">
 		<meta name="author" content="Контактная инфо">
-		<link type="text/css" rel="stylesheet" href="media/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="media/bootstrap/css/bootstrap.min.css" />
 		<link type="text/css" rel="stylesheet" href="media/css/style.css" />
+		<script src="media/js/jquery-2.2.0.min.js"></script>
+		<script src="media/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="header">
