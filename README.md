@@ -9,3 +9,5 @@ git pull https://github.com/max8web/project1.git master - СКАЧАТЬ с уд
 git push https://github.com/max8web/project1.git master - ЗАКАЧАТЬ
 
 1) появился новый пользователь max8web2
+
+2) изменение 2
