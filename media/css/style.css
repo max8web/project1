@@ -1,0 +1,105 @@
+body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+.header {
+background: url("../img/fon.jpg");
+height: 200px;
+}
+.logo {
+float: left;
+height: 180px;
+margin: 10px 0 0 15px;
+}
+.logotext {
+float: left;
+margin: 90px 0 0 10px;
+font-family: arial;
+font-size: 22pt;
+color: #333333;
+}
+.topmenu {
+display: -moz -box;
+display: -webkit -flex;
+display: flex;
+width: 100%;
+text-align: center;
+margin: 0 auto;
+}
+.topmenu a {
+display: block;
+-moz -box -flex: 1;
+-webkit -flex: 1;
+flex: 1;
+padding: 5px;
+font-family: arial;
+text-align: center;
+text-decoration: none;
+color: white;
+background: #336699;
+border-right: white solid 1px;
+}
+.topmenu a:hover {
+background: #c0c0c0;
+color: black;
+}
+.main {
+margin-top: 20px;
+}
+.main h2 {
+ margin-top: 0px;
+}
+.content {
+padding: 5px;
+}
+.content p {
+text-align: justify;
+}
+.footer {
+padding-top: 25px;
+padding-bottom: 25px;
+background: #bbbbbb;
+text-align: center;
+font-size: 12px;
+margin-top: 20px;
+}
+.footer a {
+text-decoration: none;
+font-weight: bold;
+color: red;
+}
+.footer a:hover {
+text-decoration: underline;
+}
+.my_table1 {
+background: #dcdcdc;
+font-size: 14px;
+}
+.my_table1 td {
+padding: 4px;
+}
+
+@media screen and (max-width: 991px) {
+.col-md-6 {
+margin-top: 20px;
+}
+.my_table1 {
+margin-top: 20px;
+}
+}
+@media screen and (max-width: 768px) {
+.header {
+height: 100px;
+}
+.logo {
+display: none;
+}
+.logotext {
+margin: 35px 0 0 10px;
+}
+.topmenu {
+flex-direction: column;
+}
+}
+
