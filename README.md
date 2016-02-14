@@ -10,8 +10,6 @@ git push https://github.com/max8web/project1.git master - ЗАКАЧАТЬ
 
 1) появился новый пользователь max8web2
 
-2) Изменение 1
-
-3) Редактирую файл
+2) 
 
 

@@ -17,7 +17,19 @@ float: left;
 margin: 85px 0 0 10px;
 font-family: arial;
 font-size: 22pt;
-color: #333333;
+color: #111111;
+}
+.auth {
+float: right;
+margin: 20px 30px 0 0;
+}
+.auth a{
+padding-left: 20px;
+font-weight: bold;
+color: #333;
+}
+.auth a:hover{
+color: #000
 }
 .topmenu {
 display: -moz -box;
@@ -38,7 +50,6 @@ flex: 1;
 padding: 10px;
 font-family: arial;
 text-align: center;
- vertical-align: middle;
 text-decoration: none;
 color: white;
 border-right: white solid 1px;
@@ -48,7 +59,7 @@ background: #c0c0c0;
 color: black;
 }
 .main {
-margin-top: 20px;
+margin-top: 30px;
 }
 .content {
 padding: 5px;
@@ -81,6 +92,7 @@ border-radius: 10px;
 background: #dcdcdc;
 font-size: 14px;
 border-radius: 10px;
+margin: 10px 0 10px 0;
 }
 .my_table1 td {
 padding-left: 7px;
@@ -88,15 +100,18 @@ padding-left: 7px;
 .my_table1_td1 {
 text-align: center;
 font-weight: bold;
+padding: 5px 0 5px 0;
+border-bottom: #fff solid 1px;
 }
 .btn-primary {
 margin-bottom: 10px;
+border: 1px solid #666;
 }
 .carousel-inner {
 max-height: 400px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 .col-md-6 {
 margin-top: 20px;
 }
@@ -118,7 +133,7 @@ height: 100px;
 display: none;
 }
 .logotext {
-margin: 35px 0 0 10px;
+margin: 20px 0 0 20px;
 }
 .topmenu {
 flex-direction: column;

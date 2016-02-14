@@ -14,12 +14,16 @@
 	<body>
 		<div class="header">
 			<img src="media/img/logo.png" class="logo" />
-			<h1 class="logotext">Разработка сайтов на PHP</h1>
+			<div class="auth">
+			<a href="#">Регистрация</a>
+			<a href="#">Вход</a>
+			</div>
+			<h1 class="logotext">* Разработка сайтов на PHP</h1>
 		</div>
 		<nav class="topmenu">
 			<a href="#">Главная</a>
 			<a href="#">О компании</a>
-			<a href="#">Продукция</a>
+			<a href="#">Наши работы</a>
 			<a href="#">Вакансии</a>
 			<a href="#">Контакты</a>
 		</nav>
