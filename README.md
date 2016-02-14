@@ -12,4 +12,6 @@ git push https://github.com/max8web/project1.git master - ЗАКАЧАТЬ
 
 2) Изменение 1
 
+3) Редактирую файл
+
 
