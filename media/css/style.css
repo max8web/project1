@@ -9,12 +9,12 @@ height: 200px;
 }
 .logo {
 float: left;
-height: 180px;
-margin: 10px 0 0 15px;
+height: 160px;
+margin: 20px 0 0 20px;
 }
 .logotext {
 float: left;
-margin: 90px 0 0 10px;
+margin: 85px 0 0 10px;
 font-family: arial;
 font-size: 22pt;
 color: #333333;
@@ -26,18 +26,21 @@ display: flex;
 width: 100%;
 text-align: center;
 margin: 0 auto;
+background: #336699;
+background: linear-gradient(to bottom, #111 0%, #336699 7%, #336699 95%, #ddd 100%);
 }
 .topmenu a {
+height: 40px;
 display: block;
 -moz -box -flex: 1;
 -webkit -flex: 1;
 flex: 1;
-padding: 5px;
+padding: 10px;
 font-family: arial;
 text-align: center;
+ vertical-align: middle;
 text-decoration: none;
 color: white;
-background: #336699;
 border-right: white solid 1px;
 }
 .topmenu a:hover {
@@ -69,15 +72,31 @@ color: red;
 .footer a:hover {
 text-decoration: underline;
 }
+.my_table0 {
+background: #dcdcdc;
+font-size: 14px;
+border-radius: 10px;
+}
 .my_table1 {
 background: #dcdcdc;
 font-size: 14px;
+border-radius: 10px;
 }
 .my_table1 td {
-padding: 4px;
+padding-left: 7px;
+}
+.my_table1_td1 {
+text-align: center;
+font-weight: bold;
+}
+.btn-primary {
+margin-bottom: 10px;
+}
+.carousel-inner {
+max-height: 400px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
 .col-md-6 {
 margin-top: 20px;
 }
@@ -86,6 +105,12 @@ margin-top: 20px;
 }
 }
 @media screen and (max-width: 768px) {
+.topmenu {
+background: linear-gradient(to bottom, #111 0%, #336699 2%, #336699 98%, #eee 100%);
+}
+.topmenu a{
+border-bottom: white solid 1px;
+}
 .header {
 height: 100px;
 }
