@@ -1,4 +1,4 @@
-</div>
+			</div>
 			<div class="col-md-3">
 				<table class="my_table0" width="100%" height="180">
 				<tr><td class="my_table1_td1"><a href="http://6.pogoda.by/26850" target="_blank">Погода</a></td></tr>
