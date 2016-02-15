@@ -22,11 +22,11 @@
 			<h1 class="logotext">* Разработка сайтов на PHP</h1>
 		</div>
 		<nav class="topmenu">
-			<a href="#">Главная</a>
-			<a href="#">О компании</a>
+			<a href="/">Главная</a>
+			<a href="index.php?url=about_company">О компании</a>
 			<a href="#">Наши работы</a>
-			<a href="#">Вакансии</a>
-			<a href="#">Контакты</a>
+			<a href="index.php?url=vacancy">Вакансии</a>
+			<a href="index.php?url=contacts">Контакты</a>
 		</nav>
 		<div class="main">
 			<div class="col-md-3">				

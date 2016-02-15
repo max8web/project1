@@ -1,6 +1,13 @@
 <? 
 require_once ("templates/top.php"); 
-$query="SELECT * FROM maintexts WHERE url='index'";
+/*if ($_GET['url']) { 
+	$file=$_GET['url']; 
+	}
+	else { 
+	$file='index'; 
+	}	*/
+$file=(isset($_GET['url']))?$_GET['url']:'index';	
+$query="SELECT * FROM maintexts WHERE url='$file'";
 $adr=mysql_query($query);
 if (!$adr) {
 	exit ('no query');
