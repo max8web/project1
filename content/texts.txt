@@ -1,3 +1,9 @@
+index
+about_company
+vacancy
+contacts	
+
+
 # О Компании
 
 <p>
