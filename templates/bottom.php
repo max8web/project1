@@ -11,7 +11,8 @@
 				</table>
 			</div>
 		</div>
-		<br style="clear:both;">
+	</div>
+		<!--<br style="clear:both;">-->
 		<div class="footer">
 		Copyright &copy; max-web - 2016
 		</div>

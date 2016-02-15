@@ -1,5 +1,5 @@
 <?php
-	$db_location='localhost:3307';
+	$db_location='localhost';
 	$db_name='max-web';
 	$db_user='root';
 	$db_password='';
