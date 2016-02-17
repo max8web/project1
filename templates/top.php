@@ -1,4 +1,7 @@
-<?php require_once ('config/config.php'); ?>
+<?php 
+session_start();
+require_once ('config/config.php'); 
+?>
 <!Doctype>
 <html>
 	<head>
@@ -19,8 +22,13 @@
 				<img src="media/img/logo.png" class="logo" />
 			</a>
 			<div class="auth">
-			<a href="#">Регистрация</a>
-			<a href="#">Вход</a>
+				<?php if ($_SESSION['id']) { ?>
+					<a href="#">Кабинет</a>
+					<a href="logout.php">Выход</a>
+				<?php } else { ?>
+					<a href="register.php">Регистрация</a>
+					<a href="login.php">Вход</a>
+				<?php } ?>
 			</div>
 			<h1 class="logotext">* Разработка сайтов на PHP</h1>
 		</div>

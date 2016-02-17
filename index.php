@@ -1,6 +1,6 @@
 <? 
 require_once ("templates/top.php"); 
-/*if ($_GET['url']) { 
+	/*if ($_GET['url']) { 
 	$file=$_GET['url']; 
 	}
 	else { 
@@ -21,4 +21,4 @@ if ($file=='index') require_once ("templates/carousel.php");
 				<?php echo $tbl['body']; ?>
 				</div>			
 			
-<? require_once ("templates/bottom.php") ?>
+<? require_once ("templates/bottom.php"); ?>
