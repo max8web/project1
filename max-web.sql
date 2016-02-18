@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Фев 17 2016 г., 12:56
--- Версия сервера: 5.5.38-log
--- Версия PHP: 5.5.13
+-- Хост: 127.0.0.1:3306
+-- Время создания: Фев 18 2016 г., 21:42
+-- Версия сервера: 5.5.45
+-- Версия PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,22 @@ SET time_zone = "+00:00";
 --
 -- База данных: `max-web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ads`
+--
+
+CREATE TABLE IF NOT EXISTS `ads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `name` tinytext NOT NULL,
+  `body` text NOT NULL,
+  `picture` text NOT NULL,
+  `datecreate` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -69,15 +85,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastvisit` datetime NOT NULL,
   `blockunblock` enum('unblock','block') NOT NULL DEFAULT 'unblock',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `fio`, `email`, `login`, `password`, `datereg`, `lastvisit`, `blockunblock`) VALUES
-(1, 'fio', 'erer@mail.ru', 'login', 'pass', '2016-02-17', '2016-02-17 09:52:05', 'unblock'),
-(3, 'fio', 'email@email.ru', 'login', 'pass', '2016-02-17', '2016-02-17 10:20:48', 'unblock');
+(3, 'fio', 'email@email.ru', 'login', 'pass', '2016-02-17', '2016-02-17 10:20:48', 'unblock'),
+(4, 'fio2', 'mail@mail.ru', 'login2', 'pass2', '2016-02-18', '2016-02-18 20:57:37', 'unblock');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
