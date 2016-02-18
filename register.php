@@ -1,57 +1,57 @@
-<? require_once ("templates/top.php"); 
-
-				if ($_POST) {
-					$error=[];
-					$fio=trim($_POST['fio']);
-					$email=trim($_POST['email']);
-					$login=trim($_POST['login']);
-					$password=trim($_POST['password']);
-					$password2=trim($_POST['password2']);
-					if (!$fio) {
-						$error[]='Поле: Фио обязательно для заполнения';
-					}
-					if (!$email) {
-						$error[]='Поле: Email обязательно для заполнения';
-					}
-					if (!$login) {
-						$error[]='Поле: Login обязательно для заполнения';
-					}
-					if (!$password) {
-						$error[]='Поле: Password обязательно для заполения';
-					}
-					if ($password!==$password2) {
-						$error[]="Введен неверный повторный пароль";
-					}
-					$query2="SELECT * FROM users WHERE login='$login' or email='$email'";
-					$cat2=mysql_query($query2);
-					if (!$cat2) {
-						exit ($query2);
-					}
-					$res2=mysql_fetch_array($cat2);
-					if ($res2['id']!==NULL) {
-						$error[]="Пользователь с таким Login/Email уже существует";
-					}
-					if (count($error)>0) {
-						foreach ($error as $one) {
-							echo "<div style='color:red;' class='error'>";
-							echo $one;
-							echo "</div>";
-						}			
-					}
-					else {
-						$query="INSERT INTO users (fio, email, login, password, datereg, lastvisit, blockunblock) VALUES ('$fio', '$email', '$login', '$password', now(), now(), 'unblock')";
-						$cat=mysql_query($query);
-						if (!$cat) {
-							exit ($query);
-						}
-						?>
-						<script>
-							document.location.href='index.php';
-						</script>
-						<?php
-					}
-					
-				}
+<? 
+	require_once ("templates/top.php");  
+	
+	if ($_POST) {
+		$error=array();
+		$fio=trim($_POST['fio']);
+		$email=trim($_POST['email']);
+		$login=trim($_POST['login']);
+		$password=trim($_POST['password']);
+		$password2=trim($_POST['password2']);
+		if (!$fio) {
+			$error[]='Поле: Фио обязательно для заполнения';
+		}
+		if (!$email) {
+			$error[]='Поле: Email обязательно для заполнения';
+		}
+		if (!$login) {
+			$error[]='Поле: Login обязательно для заполнения';
+		}
+		if (!$password) {
+			$error[]='Поле: Password обязательно для заполения';
+		}
+		if ($password!==$password2) {
+			$error[]="Введен неверный повторный пароль";
+		}
+		$query2="SELECT * FROM users WHERE login='$login' or email='$email'";
+		$cat2=mysql_query($query2);
+		if (!$cat2) {
+			exit ($query2);
+		}
+		$res2=mysql_fetch_array($cat2);
+		if ($res2['id']!==NULL) {
+			$error[]="Пользователь с таким Login/Email уже существует";
+		}
+		if (count($error)>0) {
+			foreach ($error as $one) {
+				echo "<div style='color:red;' class='error'>";
+				echo $one;
+				echo "</div>";
+			}			
+		}
+		else {
+			$query="INSERT INTO users (fio, email, login, password, datereg, lastvisit, blockunblock) VALUES ('$fio', '$email', '$login', '$password', now(), now(), 'unblock')";
+			$cat=mysql_query($query);
+			if (!$cat) {
+				exit ($query);
+			}
+			?>
+			<script>
+				document.location.href='index.php';
+			</script>
+			<?php
+		}		
+	}
 ?>
 					
 				<h2>Регистрация</h2>

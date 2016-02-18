@@ -30,7 +30,7 @@ require_once ('config/config.php');
 					<a href="login.php">Вход</a>
 				<?php } ?>
 			</div>
-			<h1 class="logotext">* Разработка сайтов на PHP</h1>
+			<h1 class="logotext">Разработка сайтов на PHP</h1>
 		</div>
 		<nav class="topmenu">
 			<a href="/">Главная</a>

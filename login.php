@@ -1,30 +1,31 @@
-<? require_once ("templates/top.php"); ?>
+<? 
+	require_once ("templates/top.php"); 
+	
+	if ($_POST) {
+		$login=trim($_POST['login']);
+		$password=trim($_POST['password']);
+		$query="SELECT * FROM users WHERE login='$login' AND password='$password'";
+		$cat=mysql_query($query);
+		if (!$cat) {
+			exit ($query);
+		}
+		$res=mysql_fetch_array($cat);
+		if ($res['id']) {
+			$_SESSION['id']=$res['id'];
+			?>
+			<script>
+				document.location.href='index.php';
+			</script>
+			<?php
+		}
+		else {
+			echo "<div style='color:red;'>Неверно набрал логин/пароль</div>";
+		}
+	}
+?>
 					
 				<h2>Авторизация</h2>
 				<div class="content">
-				<? 
-				if ($_POST) {
-					$login=trim($_POST['login']);
-					$password=trim($_POST['password']);
-					$query="SELECT * FROM users WHERE login='$login' AND password='$password'";
-					$cat=mysql_query($query);
-					if (!$cat) {
-						exit ($query);
-					}
-					$res=mysql_fetch_array($cat);
-					if ($res['id']) {
-						$_SESSION['id']=$res['id'];
-						?>
-						<script>
-							document.location.href='index.php';
-						</script>
-						<?php
-					}
-					else {
-						echo "<div style='color:red;'>Неверно набрал логин/пароль</div>";
-					}
-				}
-				?>
 				
 					<form action="login.php" method="POST">
 					
