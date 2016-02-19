@@ -1,6 +1,6 @@
 <?php 
-session_start();
-require_once ('config/config.php'); 
+	session_start();
+	require_once ('config/config.php'); 
 ?>
 <!Doctype>
 <html>
@@ -23,7 +23,7 @@ require_once ('config/config.php');
 			</a>
 			<div class="auth">
 				<?php if ($_SESSION['id']) { ?>
-					<a href="#">Кабинет</a>
+					<a href="cabinet.php">Кабинет</a>
 					<a href="logout.php">Выход</a>
 				<?php } else { ?>
 					<a href="register.php">Регистрация</a>
