@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Фев 19 2016 г., 12:48
--- Версия сервера: 5.5.38-log
--- Версия PHP: 5.5.13
+-- Хост: 127.0.0.1:3306
+-- Время создания: Фев 20 2016 г., 16:33
+-- Версия сервера: 5.5.45
+-- Версия PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `user_id` int(11) NOT NULL,
   `putdate` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 --
 -- Дамп данных таблицы `products`
@@ -81,7 +81,9 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`id`, `name`, `body`, `picture`, `price`, `cat_id`, `vip`, `showhide`, `product_code`, `user_id`, `putdate`) VALUES
 (44, 'Продукт №1', '<p>Описание продукта №1</p>', 'image1455871428.jpg', '100', 1, 1, 'show', 111, 3, '2016-02-19'),
 (45, 'Продукт №2', '<p>Описание продукта №2</p>', 'image1455871501.jpg', '200', 2, 0, 'show', 222, 3, '2016-02-19'),
-(46, 'Продукт №3', '<p>Описание продукта №3</p>', 'image1455871522.jpg', '300', 3, 1, 'show', 333, 3, '2016-02-19');
+(46, 'Продукт №3', '<p>Описание продукта №3</p>', 'image1455871522.jpg', '300', 3, 1, 'show', 333, 3, '2016-02-19'),
+(47, 'Продукт №4', '<p>Описание продукта №4</p>', 'image1455974144.jpg', '400', 4, 0, 'show', 444, 3, '2016-02-20'),
+(48, 'Продукт №5', '<p>Описание продукта №5</p>', 'image1455974483.jpg', '500', 5, 1, 'show', 555, 3, '2016-02-20');
 
 -- --------------------------------------------------------
 

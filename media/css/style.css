@@ -125,6 +125,25 @@ max-height: 400px;
 #carousel-example-generic {
 margin-bottom: 20px;
 }
+.content_table1 {
+width: 100%;
+}
+.content_table1 th {
+padding: 10px 5px 10px 5px;
+text-align: center;
+border: 1px solid #000;
+}
+.content_table1 td {
+padding: 5px;
+border: 1px solid #ccc;
+text-align: center;
+}
+.content_table1 img {
+width: 100px;
+}
+.content form {
+padding: 20px 0 20px 0;
+}
 
 @media screen and (max-width: 991px) {
 .col-md-6 {

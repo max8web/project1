@@ -14,7 +14,7 @@
 			$_SESSION['id']=$res['id'];
 			?>
 			<script>
-				document.location.href='index.php';
+				document.location.href='cabinet.php';
 			</script>
 			<?php
 		}

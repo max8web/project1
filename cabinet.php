@@ -99,10 +99,17 @@
 	if (!$cat) {
 		exit ($query);
 	}
+	echo "<table class='content_table1'><tr><th>Фото</th><th>Название</th><th>Цена</th><th>Дата создания</th><th>Действия</th></tr>";
 	while ($rows=mysql_fetch_array($cat)) {
-		echo $rows['name'];
-		echo "<hr/>";
+		echo "<tr>";
+		echo "<td><a target='_blank' href='/media/uploads/".$rows['picture']."'><img src='/media/uploads/".$rows['picture']."'/></a></td>";
+		echo "<td>".$rows['name']."</td>";
+		echo "<td>".$rows['price']."</td>";
+		echo "<td>".$rows['putdate']."</td>";
+		echo "<td>Удалить / Редактировать<br />Скрыть / Отобразить</td>";
+		echo "</tr>";
 	}
+	echo "</table>";
 ?>
 	
 	</div>
