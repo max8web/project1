@@ -142,11 +142,37 @@ text-align: center;
 width: 100px;
 }
 .content form {
-padding: 20px 0 20px 0;
+padding: 20px 0 40px 0;
 }
 .hide1 {
-background: red;
+background: #ddd;
 }
+.works {
+float: left;
+width: 31%;
+min-width: 170px;
+border: 1px solid #000;
+margin: 0 2% 2% 0%;
+}
+.works img {
+width: 100%;
+}
+.works_content {
+padding: 10px;
+}
+.works_name {
+font-weight: bold;
+padding-top: 10px;
+}
+.works_price{
+padding-top: 5px;
+}
+.works_basket {
+padding-top: 15px;
+text-align: right;
+color: red;
+}
+
 
 @media screen and (max-width: 991px) {
 .col-md-6 {

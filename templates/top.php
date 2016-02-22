@@ -35,7 +35,7 @@
 		<nav class="topmenu">
 			<a href="/">Главная</a>
 			<a href="index.php?url=about_company">О компании</a>
-			<a href="index.php?url=works">Наши работы</a>
+			<a href="works.php">Наши работы</a>
 			<a href="index.php?url=vacancy">Вакансии</a>
 			<a href="index.php?url=contacts">Контакты</a>
 		</nav>

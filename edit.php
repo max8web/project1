@@ -17,8 +17,11 @@
 		$price=$_POST['price'];
 		$picture=$result['picture'];
 		if ($_FILES['picture']['size']==!0) {
-				$tmp=$_FILES['picture']['tmp_name'];
 				$dir=$_SERVER['DOCUMENT_ROOT'].'/media/uploads/';
+				if ((file_exists ($dir.$picture))AND($picture!='no_image.jpg')) {
+				unlink ($dir.$picture);
+				}
+				$tmp=$_FILES['picture']['tmp_name'];				
 				$picture='image'.time().'.jpg';
 				if (!move_uploaded_file($tmp,$dir.$picture)) {
 					echo "Ошибка загрузки файла";

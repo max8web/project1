@@ -3,11 +3,6 @@
 	require_once ('templates/top.php');	
 	
 	if($_POST) {
-		/*
-		echo "<pre>";
-		print_r ($_FILES);
-		echo "</pre>";
-		*/
 		$error=array();
 		$name=trim($_POST['name']);
 		$body=trim($_POST['body']);
@@ -30,14 +25,17 @@
 			}
 		}
 		else {
-			if ($_FILES) {
+			if ($_FILES['picture']['size']==!0) {
 				$tmp=$_FILES['picture']['tmp_name'];
 				$dir=$_SERVER['DOCUMENT_ROOT'].'/media/uploads/';
 				$picture='image'.time().'.jpg';
 				if (!move_uploaded_file($tmp,$dir.$picture)) {
 					echo "Ошибка загрузки файла";
 				}
-			}			
+			}
+			else {
+				$picture='no_image.jpg';
+			}
 			$query="INSERT INTO products (`name`,`body`,`picture`,`price`,`cat_id`,`vip`,`product_code`,`user_id`,`putdate`) VALUES ('$name','$body','$picture','$price','$cat_id','$vip','$product_code',".$_SESSION['id'].",now())";
 			$cat=mysql_query($query);
 			if (!$cat) {
@@ -102,12 +100,12 @@
 	echo "<table class='content_table1'><tr><th>Фото</th><th>Название</th><th>Цена</th><th>Дата создания</th><th>Действия</th></tr>";
 	while ($rows=mysql_fetch_array($cat)) {
 		if ($rows['showhide']=='show') {
-		$class='show1';
-		$showhide="<a href='showhide.php?status=hide&id=".$rows['id']."'>Скрыть</a>";
+			$class='show1';
+			$showhide="<a href='showhide.php?status=hide&id=".$rows['id']."'>Скрыть</a>";
 		}
 		else {
-		$class='hide1';
-		$showhide="<a href='showhide.php?status=show&id=".$rows['id']."'>Отобразить</a>";
+			$class='hide1';
+			$showhide="<a href='showhide.php?status=show&id=".$rows['id']."'>Отобразить</a>";
 		}
 		echo "<tr class='".$class."'>";
 		echo "<td><a target='_blank' href='/media/uploads/".$rows['picture']."'><img src='/media/uploads/".$rows['picture']."'/></a></td>";
