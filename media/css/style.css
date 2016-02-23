@@ -150,7 +150,8 @@ background: #ddd;
 .works {
 float: left;
 width: 31%;
-min-width: 170px;
+min-width: 180px;
+max-width: 210px;
 border: 1px solid #000;
 margin: 0 2% 2% 0%;
 }
