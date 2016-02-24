@@ -2,6 +2,12 @@
 	require_once ('libs/middleware_auth.php');
 	require_once ('templates/top.php');	
 	
+	if ($_SESSION['admin']==0) {
+		echo "<div class='error_message'>Доступ запрещен!</div>";
+		exit();
+	}
+	
+	// добавление новых товаров
 	if($_POST) {
 		$error=array();
 		$name=trim($_POST['name']);
@@ -45,11 +51,13 @@
 	}	
 	
 ?>
-	<h2>Кабинет пользователя</h2>
+	<h2>Кабинет администратора</h2>
 	
 	<div class="content">
 
 		<form enctype="multipart/form-data" method="POST" action="cabinet.php">
+		
+			<p><strong>Добавление нового товара:</strong></p>
 		
 			<div class="form-group">
 			<label for="examplename">Название</label>
@@ -90,7 +98,10 @@
 		
 		</form>
 		
+		<p><strong>Добавленные товары:</strong></p>
+	
 <?
+	// вывод списка добавленных товаров	
 	$session_id=$_SESSION['id'];
 	$query="SELECT * FROM products WHERE user_id=$session_id";
 	$cat=mysql_query($query);

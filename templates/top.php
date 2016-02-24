@@ -24,7 +24,6 @@
 			<div class="auth">
 				<a href="basket.php">Корзина</a>
 				<?php if ($_SESSION['id']) { ?>
-					<a href="cabinet.php">Кабинет</a>
 					<a href="logout.php">Выход</a>
 				<?php } else { ?>
 					<a href="register.php">Регистрация</a>
@@ -40,13 +39,6 @@
 			<a href="index.php?url=vacancy">Вакансии</a>
 			<a href="index.php?url=contacts">Контакты</a>
 		</nav>
-		<div class="main">
-			<div class="col-md-3">				
-				<a href="index.php?url=development" class="btn btn-primary btn-block">Разработка сайтов</a>
-				<a href="index.php?url=promotion" class="btn btn-primary btn-block">Продвижение</a>
-				<a href="index.php?url=rework" class="btn btn-primary btn-block">Доработка</a>
-				<a href="index.php?url=testing" class="btn btn-primary btn-block">Тестирование</a>
-				<a href="index.php?url=support" class="btn btn-primary btn-block">Поддержка</a>
-				
-			</div>
-			<div class="col-md-6">	
+		<div class="main">			
+
+			<div class="col-md-9">	

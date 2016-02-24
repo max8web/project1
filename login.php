@@ -12,11 +12,18 @@
 		$res=mysql_fetch_array($cat);
 		if ($res['id']) {
 			$_SESSION['id']=$res['id'];
+			$_SESSION['admin']=$res['isadmin'];
+			if ($_SESSION['admin']=='1') {
 			?>
-			<script>
-				document.location.href='cabinet.php';
-			</script>
-			<?php
+				<script>
+					document.location.href='cabinet.php';
+				</script>
+			<?php } else { ?>
+				<script>
+					document.location.href='my_orders.php';
+				</script>
+			<?
+			}
 		}
 		else {
 			echo "<div style='color:red;'>Неверно набрал логин/пароль</div>";

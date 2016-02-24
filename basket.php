@@ -47,9 +47,18 @@
 			echo "Ваша корзина пуста";
 		}	
 		
-		// автозаполнение формы
 		
-
+		// автозаполнение формы
+		if ($_SESSION['id']) {
+			$session_id=$_SESSION['id'];
+			$query="SELECT * FROM users WHERE id='$session_id'";
+			$res=mysql_query($query);
+			$result=mysql_fetch_array($res);
+			$name=$result['fio'];
+			$email=$result['email'];
+		}
+		
+		
 		// оформление заявки
 		if ($_POST) {
 			$error=array();
@@ -74,7 +83,7 @@
 			}
 			else {
 				$session=(isset($_SESSION['id']))?$_SESSION['id']:0;
-				$query="INSERT INTO orders VALUES (null,'$name','$email','$phone','".$_COOKIE['basket']."','new','$session')";
+				$query="INSERT INTO orders VALUES (null,'$name','$email','$phone','".$_COOKIE['basket']."','Обрабатывается','$session')";
 				$res=mysql_query($query);
 				if (!$res) {
 					exit ($query);
@@ -94,11 +103,11 @@
 				<p><strong>Оформление заказа:</strong></p>
 				<div class="form-group">
 				<label for="examplefio">Имя</label>
-				<input type="text" class="form-control" id="examplefio" placeholder="Имя" name="name">
+				<input type="text" class="form-control" id="examplefio" placeholder="Имя" name="name" value="<?=$name;?>">
 				</div>
 				<div class="form-group">
 				<label for="exampleemail">E-mail</label>
-				<input type="email" class="form-control" id="exampleemail" placeholder="E-mail" name="email">
+				<input type="email" class="form-control" id="exampleemail" placeholder="E-mail" name="email" value="<?=$email;?>">
 				</div>
 				<div class="form-group">
 				<label for="examplelogin">Телефон</label>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Фев 24 2016 г., 12:59
--- Версия сервера: 5.5.38-log
--- Версия PHP: 5.5.13
+-- Хост: 127.0.0.1:3306
+-- Время создания: Фев 24 2016 г., 22:34
+-- Версия сервера: 5.5.45
+-- Версия PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -68,14 +68,15 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `status` tinytext NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Дамп данных таблицы `orders`
 --
 
 INSERT INTO `orders` (`id`, `name`, `email`, `phone`, `zakaz`, `status`, `user_id`) VALUES
-(13, 'max', 'email@mail.ru', '123', 'a:3:{i:55;i:1;i:62;i:1;i:67;i:1;}', 'new', 3);
+(25, 'Гость', 'mail@mail.ru', '43434353', 'a:3:{i:54;i:1;i:62;i:1;i:64;i:1;}', 'Обрабатывается', 0),
+(26, 'Покупатель', 'email@email.ru', '4546464654', 'a:4:{i:54;i:1;i:55;i:1;i:62;i:1;i:64;i:1;}', 'Обрабатывается', 5);
 
 -- --------------------------------------------------------
 
@@ -103,12 +104,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `body`, `picture`, `price`, `cat_id`, `vip`, `showhide`, `product_code`, `user_id`, `putdate`) VALUES
-(54, 'Товар №1', '<p>Описание 1</p>', 'image1456164353.jpg', '100', 1, 1, 'show', 111, 3, '2016-02-22'),
+(54, 'Товар №1', '<p>Описание 1</p>', 'image1456164353.jpg', '200', 1, 1, 'show', 111, 3, '2016-02-22'),
 (55, 'Товар №2', '<p>Описание 2</p>', 'image1456129280.jpg', '200', 2, 1, 'show', 222, 3, '2016-02-22'),
 (62, 'Товар №3', '<p>Описание</p>', 'image1456163544.jpg', '700', 7, 1, 'show', 777, 3, '2016-02-22'),
 (64, 'Товар №4', '<p>Описание</p>', 'image1456164485.jpg', '500', 4, 0, 'show', 444, 3, '2016-02-22'),
 (66, 'Товар №5', '<p>Описание</p>', 'no_image.jpg', '500', 5, 1, 'show', 555, 3, '2016-02-22'),
-(67, 'Продукт №6', '<p>Описание</p>', 'image1456169170.jpg', '600', 6, 1, 'show', 666, 3, '2016-02-22');
+(67, 'Товар №6', '<p>Описание</p>', 'image1456169170.jpg', '600', 6, 1, 'show', 666, 3, '2016-02-22');
 
 -- --------------------------------------------------------
 
@@ -125,16 +126,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `datereg` date NOT NULL,
   `lastvisit` datetime NOT NULL,
   `blockunblock` enum('unblock','block') NOT NULL DEFAULT 'unblock',
+  `isadmin` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `fio`, `email`, `login`, `password`, `datereg`, `lastvisit`, `blockunblock`) VALUES
-(3, 'fio', 'email@email.ru', 'login', 'pass', '2016-02-17', '2016-02-17 10:20:48', 'unblock'),
-(4, 'fio2', 'mail@mail.ru', 'login2', 'pass2', '2016-02-18', '2016-02-18 20:57:37', 'unblock');
+INSERT INTO `users` (`id`, `fio`, `email`, `login`, `password`, `datereg`, `lastvisit`, `blockunblock`, `isadmin`) VALUES
+(3, 'Админ', 'admin@mail.ru', 'admin', 'admin', '2016-02-24', '2016-02-24 18:52:02', 'unblock', '1'),
+(4, 'fio2', 'mail@mail.ru', 'login2', 'pass2', '2016-02-18', '2016-02-18 20:57:37', 'unblock', '0'),
+(5, 'Покупатель', 'email@email.ru', 'login', 'pass', '2016-02-17', '2016-02-17 10:20:48', 'unblock', '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
