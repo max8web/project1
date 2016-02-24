@@ -141,6 +141,12 @@ text-align: center;
 .content_table1 img {
 width: 100px;
 }
+.content_table1 input[type="number"] {
+width: 40px;
+}
+.content_table1 td form {
+padding: 0px;
+}
 .content form {
 padding: 20px 0 40px 0;
 }

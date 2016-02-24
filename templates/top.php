@@ -22,6 +22,7 @@
 				<img src="media/img/logo.png" class="logo" />
 			</a>
 			<div class="auth">
+				<a href="basket.php">Корзина</a>
 				<?php if ($_SESSION['id']) { ?>
 					<a href="cabinet.php">Кабинет</a>
 					<a href="logout.php">Выход</a>
