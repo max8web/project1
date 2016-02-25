@@ -1,5 +1,5 @@
 <?
-	require_once ('config/config.php');
+	require_once ('../../config/config.php');
 	$id=(isset($_GET['id']))?$_GET['id']:0;
 	if ($id==!0) {
 		$query="SELECT * FROM products WHERE id='$id'";
@@ -17,7 +17,7 @@
 		if (!$cat2) {
 			exit ($query2);
 		}
-		header('location: cabinet.php');
+		header('location: ../../cabinet.php');
 	}
 	
 ?>

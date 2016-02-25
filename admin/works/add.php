@@ -10,5 +10,5 @@
 	$str=serialize($arr);
 	setcookie('basket',$str,time()+60*60*2,'/');
 	//print_r ($_COOKIE['basket']);
-	header('location:works.php');
+	header('location: ../../works.php');
 ?>

@@ -44,7 +44,7 @@
 
 	<div class="content">
 
-		<form enctype="multipart/form-data" method="POST" action="edit.php?id=<?=$id?>">
+		<form enctype="multipart/form-data" method="POST" action="cabinet_edit.php?id=<?=$id?>">
 		
 			<div class="form-group">
 			<label for="examplename">Название</label>

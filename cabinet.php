@@ -112,18 +112,18 @@
 	while ($rows=mysql_fetch_array($cat)) {
 		if ($rows['showhide']=='show') {
 			$class='show1';
-			$showhide="<a href='showhide.php?status=hide&id=".$rows['id']."'>Скрыть</a>";
+			$showhide="<a href='admin/cabinet/showhide.php?status=hide&id=".$rows['id']."'>Скрыть</a>";
 		}
 		else {
 			$class='hide1';
-			$showhide="<a href='showhide.php?status=show&id=".$rows['id']."'>Отобразить</a>";
+			$showhide="<a href='admin/cabinet/showhide.php?status=show&id=".$rows['id']."'>Отобразить</a>";
 		}
 		echo "<tr class='".$class."'>";
 		echo "<td><a target='_blank' href='/media/uploads/".$rows['picture']."'><img src='/media/uploads/".$rows['picture']."'/></a></td>";
 		echo "<td>".$rows['name']."</td>";
 		echo "<td>".$rows['price']."</td>";
 		echo "<td>".$rows['putdate']."</td>";
-		echo "<td><a href='delete.php?id=".$rows['id']."'>Удалить</a> / <a href='edit.php?id=".$rows['id']."'>Редактировать</a><br />".$showhide."</td>";
+		echo "<td><a href='admin/cabinet/delete.php?id=".$rows['id']."'>Удалить</a> / <a href='cabinet_edit.php?id=".$rows['id']."'>Редактировать</a><br />".$showhide."</td>";
 		echo "</tr>";
 	}
 	echo "</table>";

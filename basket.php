@@ -28,14 +28,14 @@
 					<td><?=$result['name'];?></td>
 					<td><?=$result['price'];?></td>
 					<td>
-						<form name="basket_count" method="POST" action="edit_card.php?id=<?=$result['id'];?>">
+						<form name="basket_count" method="POST" action="admin/basket/edit.php?id=<?=$result['id'];?>">
 						<input type="number" name="count" value="<?=$value;?>"/>				
 						<input type="submit" value="Edit">
 						</form>
 					</td>
 					<td><?=$summ;?></td>
 					<td>				
-						<a href="card_dell.php?id=<?=$result['id']?>">Удалить</a>
+						<a href="admin/basket/delete.php?id=<?=$result['id']?>">Удалить</a>
 					</td>
 				</tr>
 				<?

@@ -1,5 +1,5 @@
 <?
-	require_once ('config/config.php');
+	require_once ('../../config/config.php');
     $id=(isset($_GET['id']))?$_GET['id']:0;
 	$showhide=(isset($_GET['status']))?$_GET['status']:'show';
 	if ($id==!0) {
@@ -9,5 +9,5 @@
 			exit ($query);
 		}
 	}
-	header('location: cabinet.php');
+	header('location: ../../cabinet.php');
 ?>

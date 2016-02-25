@@ -4,10 +4,10 @@
 		$arr=unserialize($_COOKIE['basket']);
 	}
 	else {
-		echo "Ошибка";
+		echo "ошибка";
 	}
 	$arr[$id]=$_POST['count'];
 	$str=serialize($arr);
 	setcookie('basket', $str, time()+60*60*2, '/');
-	header ('location:basket.php');
+	header ('location: ../../basket.php');
 ?>
