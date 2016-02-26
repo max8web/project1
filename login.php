@@ -16,7 +16,7 @@
 			if ($_SESSION['admin']=='1') {
 			?>
 				<script>
-					document.location.href='cabinet.php';
+					document.location.href='index.php';
 				</script>
 			<?php } else { ?>
 				<script>

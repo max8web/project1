@@ -4,6 +4,7 @@
 				<?php if (($_SESSION['id'])AND($_SESSION['admin'])==1) { ?>
 				<a href="cabinet.php" class="btn btn-default btn-block">Кабинет администратора</a>
 				<a href="my_orders_admin.php" class="btn btn-default btn-block">Все заказы</a>
+				<a href="prices.php" class="btn btn-default btn-block">Добавить прайс</a>
 				<? } ?>
 				<?php if (($_SESSION['id'])AND($_SESSION['admin'])==0) { ?>
 				<a href="my_orders.php" class="btn btn-default btn-block">Мои заказы</a>

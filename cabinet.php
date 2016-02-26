@@ -2,11 +2,6 @@
 	require_once ('libs/middleware_auth.php');
 	require_once ('templates/top.php');	
 	
-	if ($_SESSION['admin']==0) {
-		echo "<div class='error_message'>Доступ запрещен!</div>";
-		exit();
-	}
-	
 	// добавление новых товаров
 	if($_POST) {
 		$error=array();

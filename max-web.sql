@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10.10
+-- version 4.0.10
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Фев 25 2016 г., 21:39
--- Версия сервера: 5.5.45
--- Версия PHP: 5.3.29
+-- Хост: 127.0.0.1:3307
+-- Время создания: Фев 26 2016 г., 12:54
+-- Версия сервера: 5.5.38-log
+-- Версия PHP: 5.5.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- База данных: `max-web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `catalogs`
+--
+
+CREATE TABLE IF NOT EXISTS `catalogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` tinytext NOT NULL,
+  `showhide` enum('show','hide') NOT NULL DEFAULT 'show',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `catalogs`
+--
+
+INSERT INTO `catalogs` (`id`, `name`, `showhide`) VALUES
+(1, 'Автомобильные шины', 'show');
 
 -- --------------------------------------------------------
 
@@ -75,9 +95,66 @@ CREATE TABLE IF NOT EXISTS `orders` (
 --
 
 INSERT INTO `orders` (`id`, `name`, `email`, `phone`, `zakaz`, `status`, `user_id`) VALUES
-(25, 'Гость', 'mail@mail.ru', '43434353', 'a:3:{i:54;i:1;i:62;i:1;i:64;i:1;}', 'Обрабатывается', 0),
 (26, 'Покупатель', 'email@email.ru', '4546464654', 'a:4:{i:54;i:1;i:55;i:1;i:62;i:1;i:64;i:1;}', 'Обрабатывается', 5),
 (27, 'Админ', 'admin@mail.ru', '433435', 'a:2:{i:55;s:1:"5";i:54;s:1:"3";}', 'Обрабатывается', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `prices`
+--
+
+CREATE TABLE IF NOT EXISTS `prices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_id` int(11) NOT NULL,
+  `product_id` tinytext NOT NULL,
+  `name` tinytext NOT NULL,
+  `product_code` tinytext NOT NULL,
+  `price` tinytext NOT NULL,
+  `currency` tinytext NOT NULL,
+  `dostavka` tinytext NOT NULL,
+  `brand` tinytext NOT NULL,
+  `address_facture` tinytext NOT NULL,
+  `body` tinytext NOT NULL,
+  `warranty` tinytext NOT NULL,
+  `dostavka_day_minsk` tinytext NOT NULL,
+  `price_dostavka_minsk` tinytext NOT NULL,
+  `dostavka_day_belarus` tinytext NOT NULL,
+  `price_dostavka_belarus` tinytext NOT NULL,
+  `address_service_centre` tinytext NOT NULL,
+  `address_import` tinytext NOT NULL,
+  `status` tinytext NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `showhide` enum('show','hide') NOT NULL DEFAULT 'show',
+  `created_at` date NOT NULL,
+  `updated_at` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3014 ;
+
+--
+-- Дамп данных таблицы `prices`
+--
+
+INSERT INTO `prices` (`id`, `cat_id`, `product_id`, `name`, `product_code`, `price`, `currency`, `dostavka`, `brand`, `address_facture`, `body`, `warranty`, `dostavka_day_minsk`, `price_dostavka_minsk`, `dostavka_day_belarus`, `price_dostavka_belarus`, `address_service_centre`, `address_import`, `status`, `user_id`, `showhide`, `created_at`, `updated_at`) VALUES
+(2995, 0, '', 'ATR Sport 215/55R17 98W', '', '1730400', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(2996, 0, '', 'Desert Hawk H/T 225/65R17 102H', '', '1545600', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(2997, 0, '', 'Desert Hawk H/T 265/70R16 112H', '', '1970700', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(2998, 0, '', 'AG02 Green Ace 175/70R13 82T', '', '515100', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(2999, 0, '', 'AH01 Precesion Ace 175/65R14 82H', '', '534600', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3000, 0, '', 'AH01 Precesion Ace 175/70R14 84T', '', '560500', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3001, 0, '', 'AH01 Precesion Ace 185/60R14 82H', '', '541000', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3002, 0, '', 'AH01 Precesion Ace 195/50R15 82V', '', '723500', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3003, 0, '', 'AH01 Precesion Ace 195/55R15 85V', '', '860500', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3004, 0, '', 'AH01 Precesion Ace 195/60R15 88H', '', '717100', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3005, 0, '', 'AH01 Precesion Ace 195/65R15 91H', '', '684500', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3006, 0, '', 'AH01 Precesion Ace 205/55R16 91V', '', '818200', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3007, 0, '', 'AH01 Precesion Ace 205/60R15 91H', '', '782300', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3008, 0, '', 'AH01 Precesion Ace 205/65R15 94H', '', '697600', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3009, 0, '', 'AH01 Precesion Ace 225/55R16 95W', '', '1238500', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3010, 0, '', 'AL01 Trans Ace 195/80R14C 106/104R', '', '1119600', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3011, 0, '', 'AL01 Trans Ace 225/75R16C 121/120R', '', '1709600', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3012, 0, '', 'AL01 Trans Ace 235/65R16C 115r/113R', '', '1797000', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00'),
+(3013, 0, '', 'AS02 Cross Ace 205/70R15 96H', '', '994300', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 'show', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -97,6 +174,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_code` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `putdate` date NOT NULL,
+  `api_url` tinytext NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=68 ;
 
@@ -104,12 +182,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Дамп данных таблицы `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `body`, `picture`, `price`, `cat_id`, `vip`, `showhide`, `product_code`, `user_id`, `putdate`) VALUES
-(54, 'Товар №1', '<p>Описание 1</p>', 'image1456164353.jpg', '500', 1, 1, 'show', 111, 3, '2016-02-22'),
-(55, 'Товар №2', '<p>Описание 2</p>', 'image1456129280.jpg', '200', 2, 1, 'show', 222, 3, '2016-02-22'),
-(62, 'Товар №3', '<p>Описание</p>', 'image1456163544.jpg', '700', 7, 1, 'show', 777, 3, '2016-02-22'),
-(64, 'Товар №4', '<p>Описание</p>', 'image1456164485.jpg', '500', 4, 0, 'show', 444, 3, '2016-02-22'),
-(67, 'Товар №6', '<p>Описание</p>', 'image1456169170.jpg', '600', 6, 1, 'show', 666, 3, '2016-02-22');
+INSERT INTO `products` (`id`, `name`, `body`, `picture`, `price`, `cat_id`, `vip`, `showhide`, `product_code`, `user_id`, `putdate`, `api_url`) VALUES
+(54, 'Товар №1', '<p>Описание 1</p>', 'image1456164353.jpg', '500', 1, 1, 'show', 111, 3, '2016-02-22', ''),
+(55, 'Товар №2', '<p>Описание 2</p>', 'image1456129280.jpg', '200', 2, 1, 'show', 222, 3, '2016-02-22', ''),
+(62, 'Товар №3', '<p>Описание</p>', 'image1456163544.jpg', '700', 7, 1, 'show', 777, 3, '2016-02-22', ''),
+(64, 'Товар №4', '<p>Описание</p>', 'image1456164485.jpg', '500', 4, 0, 'show', 444, 3, '2016-02-22', ''),
+(67, 'Товар №6', '<p>Описание</p>', 'image1456169170.jpg', '600', 6, 1, 'show', 666, 3, '2016-02-22', '');
 
 -- --------------------------------------------------------
 
