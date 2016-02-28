@@ -1,12 +1,13 @@
 			</div>
 			
 			<div class="col-md-3">	
-				<?php if (($_SESSION['id'])AND($_SESSION['admin'])==1) { ?>
+				<? if (($_SESSION['id'])AND($_SESSION['admin'])==1) { ?>
 				<a href="cabinet.php" class="btn btn-default btn-block">Кабинет администратора</a>
 				<a href="my_orders_admin.php" class="btn btn-default btn-block">Все заказы</a>
 				<a href="prices.php" class="btn btn-default btn-block">Добавить прайс</a>
+				<a href="category.php" class="btn btn-default btn-block">Управление категориями</a>
 				<? } ?>
-				<?php if (($_SESSION['id'])AND($_SESSION['admin'])==0) { ?>
+				<? if (($_SESSION['id'])AND($_SESSION['admin'])==0) { ?>
 				<a href="my_orders.php" class="btn btn-default btn-block">Мои заказы</a>
 				<? } ?>
 				<a href="index.php?url=development" class="btn btn-primary btn-block">Разработка сайтов</a>

@@ -1,5 +1,6 @@
 <?
 	require_once ('libs/middleware_auth.php');
+	require_once ('libs/middleware_admin_auth.php');
 	require_once ('templates/top.php');	
 	
 	// добавление новых товаров

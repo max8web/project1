@@ -1,4 +1,6 @@
 <?
+	require_once ('libs/middleware_auth.php');
+	require_once ('libs/middleware_admin_auth.php');	
 	require_once ('templates/top.php');	
 	$id=(isset($_GET['id']))?$_GET['id']:0;
 	$query="SELECT * FROM products WHERE id='$id'";

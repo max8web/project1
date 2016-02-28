@@ -1,4 +1,5 @@
 <?
+	require_once ('libs/middleware_auth.php');
 	require_once ('templates/top.php');				
 ?>
 	<h2>Мои заказы</h2>

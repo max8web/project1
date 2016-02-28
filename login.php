@@ -16,7 +16,7 @@
 			if ($_SESSION['admin']=='1') {
 			?>
 				<script>
-					document.location.href='index.php';
+					document.location.href='my_orders_admin.php';
 				</script>
 			<?php } else { ?>
 				<script>

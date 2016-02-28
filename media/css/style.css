@@ -189,10 +189,21 @@ padding-top: 15px;
 text-align: right;
 color: red;
 }
+.error {
+color: red;	
+}
+.status_ok{
+color: green;
+}
 .error_message {
 color: red;
 font-weight: bold;
 }
+.radio_checked {
+font-weight: bold;
+}
+
+
 
 @media screen and (max-width: 991px) {
 .col-md-6 {

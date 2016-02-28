@@ -1,0 +1,21 @@
+$query3="SELECT id,name FROM prices";
+$res3=mysql_query($query3);
+if (!$res3) {
+	exit ($query3);
+}
+while ($result3=mysql_fetch_array($res3)) {
+	$met=0;
+	while ($data=fgetcsv($handle, 1000, ";")) {
+		if ($result3['name']==$data[3]) {
+			$met=1;
+		}		
+	}
+	if ($met==0) {
+		$query="DELETE FROM prices WHERE id='".$result3['id']."'";
+		$res=mysql_query($query);
+		if (!$res) {
+			exit ($query);
+		}
+		echo "<p style='color:red;'>Товар: ".$result3['id']." - удален</p>";
+	}
+}
