@@ -22,7 +22,7 @@ margin: 30px 0 0 20px;
 .logotext {
 float: left;
 margin: 85px 0 0 20px;
-color: #111111;
+color: #000;
 }
 .logotext h1 {
 font-family: arial;
@@ -36,7 +36,7 @@ margin: 20px 30px 0 0;
 .auth a{
 padding-left: 20px;
 font-weight: bold;
-color: #333;
+color: #000;
 text-decoration: underline;
 }
 .auth a:hover{
@@ -101,7 +101,7 @@ color: red;
 text-decoration: underline;
 }
 .my_table0 {
-margin: 40px 0 20px 0;
+margin: 5px 0 20px 0;
 background: #dcdcdc;
 font-size: 14px;
 border-radius: 10px;
@@ -124,6 +124,10 @@ border-bottom: #fff solid 1px;
 .btn-primary {
 margin-bottom: 10px;
 border: 1px solid #666;
+}
+.btn-default {
+margin-bottom: 10px;
+border: 1px solid #336699;
 }
 .carousel-inner {
 max-height: 500px;
@@ -173,12 +177,10 @@ min-width: 180px;
 max-width: 210px;
 border: 1px solid #000;
 margin: 0 2% 2% 0%;
+padding: 10px;
 }
 .works img {
 width: 100%;
-}
-.works_content {
-padding: 10px;
 }
 .works_name {
 font-weight: bold;
@@ -204,6 +206,18 @@ font-weight: bold;
 }
 .radio_checked {
 font-weight: bold;
+}
+.pogoda_menu {
+margin-top: 10px;
+width: 100%;
+}
+.pogoda_menu button {
+width: 49%;
+font-size: 10pt;
+white-space: normal;
+}
+#moskva {
+display: none;
 }
 
 
