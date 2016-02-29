@@ -22,9 +22,12 @@ margin: 30px 0 0 20px;
 .logotext {
 float: left;
 margin: 85px 0 0 20px;
+color: #111111;
+}
+.logotext h1 {
 font-family: arial;
 font-size: 22pt;
-color: #111111;
+margin: 0px;
 }
 .auth {
 float: right;
