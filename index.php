@@ -8,6 +8,7 @@
 		exit ('no query');
 	}
 	$tbl=mysql_fetch_array($adr);
+	$title_name=$tbl['name'];
 	if ($file=='index') require_once ("templates/carousel.php");
 ?>
 					

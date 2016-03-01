@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	require_once ('config/config.php'); 
+	require_once ('templates/active_menu.php'); 
 ?>
 <!Doctype>
 <html>
@@ -18,7 +19,7 @@
 	</head>
 	<body>
 	<div class="wrapper">
-		<div class="header">
+		<div class="header" data-fon="<?=$fon;?>" style="background: url('media/img/<?=$fon;?>.jpg');">
 			<a href="/">
 				<img src="media/img/logo.png" class="logo" />
 			</a>
@@ -33,13 +34,13 @@
 			</div>
 			<div class="logotext">
 				<h1>Разработка сайтов на PHP</h1>
-				<p></p>
+				<p><?=$title_name;?></p>
 			</div>
 			
 		</div>
 		<nav class="topmenu">
 			<a href="/" data-url="media/img/fon.jpg" data-title="">Главная</a>
-			<a href="index.php?url=about_company" data-url="media/img/fon2.jpg" data-title="О компании">О компании</a>
+			<a href="index.php?url=about_company" data-url="media/img/fon2.jpg" data-title="О Компании">О компании</a>
 			<a href="works.php" data-url="../media/img/fon3.jpg" data-title="Наши работы">Наши работы</a>
 			<a href="index.php?url=vacancy" data-url="../media/img/fon4.jpg" data-title="Вакансии">Вакансии</a>
 			<a href="index.php?url=contacts" data-url="../media/img/fon5.jpg" data-title="Контакты">Контакты</a>
