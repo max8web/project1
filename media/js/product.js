@@ -11,9 +11,9 @@ $(document).ready(function(){
 				return $('.modal-window');
 			}		
 		}};
-		$('.works a').bind ({
+		$('.works_show a').bind ({
 				'click':function (e) {
-					e.preventDefault();
+					//e.preventDefault();
 					data=$(this).attr('data-id');
 					modal=fx.initModal();
 					$('<a>').attr('href','#').addClass('modal-close-btn').html('&times').click(function(event) {

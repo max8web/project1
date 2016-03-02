@@ -71,7 +71,7 @@ color: black;
 }
 .topmenu_active {
 background: #c0c0c0;
-color: black;
+color: black !important;
 }
 .main {
 margin-top: 30px;
@@ -185,6 +185,8 @@ padding: 10px;
 }
 .works img {
 width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 .works_name {
 font-weight: bold;
@@ -196,7 +198,11 @@ padding-top: 5px;
 .works_basket {
 padding-top: 15px;
 text-align: right;
-color: red;
+color: #336699;
+text-decoration: underline;
+}
+.works_show {
+margin-bottom: 5px;
 }
 .error {
 color: red;	
@@ -223,19 +229,23 @@ white-space: normal;
 #moskva {
 display: none;
 }
+.product {
+padding: 5px 15px;
+border: 1px solid #333;
+border-radius: 5px;
+}
 .modal-window {
-position: fixed;
+position: absolute;
 top: 5%;
-left: 50%;
-width: 800px;
 min-height: 65px;
-margin-left: -400px;
+left: 50%;
+width: 60%;
+margin-left: -30%;
 //border: solid 1px black;
 //background: white;
 padding: 20px;
 border-radius: 6px;
 z-index: 1000;
-//box-shadow: 1px 1px 1px black;
 }
 #jquery-overlay {
 background: black;
@@ -263,21 +273,44 @@ color: #000;
 }
 .modal-content {
 width: 100%;
+max-width: 800px;
 }
 .modal-content img {
 width: 100%;
 }
 .modal-content h2,h3,h4,h5 {
-padding: 5px 5px 0 5px;
+padding: 5px 10px 0 10px;
+}
+.modal-content h2 {
+text-decoration: underline;	
 }
 .modal-content h5 {
 padding-top: 15 px;
 text-align: right;
 }
 .search {
-margin: 0 0 40px 0;
+margin: 10px 0 40px 0;
 }
-
+.search .form-control {
+width: 65%;
+}
+.search .btn-default {
+margin-bottom: 0px;
+width: 33%;
+}
+.filter form {
+padding: 0 0 10px 0;
+}
+.filter .form-group{
+margin-right: 10px;
+margin-bottom: 10px;
+}
+.filter .btn-default {
+margin-bottom: 0px;
+}
+.filter .form-control {
+width: 150px;
+}
 
 
 @media screen and (max-width: 991px) {

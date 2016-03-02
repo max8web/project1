@@ -44,11 +44,11 @@
 			
 		</div>
 		<nav class="topmenu">
-			<a href="/" data-url="media/img/fon.jpg" data-title="">Главная</a>
-			<a href="index.php?url=about_company" data-url="media/img/fon2.jpg" data-title="О Компании">О компании</a>
-			<a href="works.php" data-url="media/img/fon3.jpg" data-title="Наши товары">Наши товары</a>
-			<a href="index.php?url=vacancy" data-url="media/img/fon4.jpg" data-title="Вакансии">Вакансии</a>
-			<a href="index.php?url=contacts" data-url="media/img/fon5.jpg" data-title="Контакты">Контакты</a>
+			<a <?=$a1;?> href="/" data-url="media/img/fon.jpg" data-title="">Главная</a>
+			<a <?=$a2;?> href="index.php?url=about_company" data-url="media/img/fon2.jpg" data-title="О Компании">О компании</a>
+			<a <?=$a3;?> href="works.php?url=works" data-url="media/img/fon3.jpg" data-title="Наши товары">Наши товары</a>
+			<a <?=$a4;?> href="index.php?url=vacancy" data-url="media/img/fon4.jpg" data-title="Вакансии">Вакансии</a>
+			<a <?=$a5;?> href="index.php?url=contacts" data-url="media/img/fon5.jpg" data-title="Контакты">Контакты</a>
 		</nav>
 		<div class="main">			
 

@@ -57,6 +57,13 @@
 						exit ($query2); 
 					}
 					$result2=mysql_fetch_array($res2);
+					
+					$query3="UPDATE products SET cat_id='$cat_id' WHERE name='".$result['name']."'";
+					$res3=mysql_query($query3);
+					if (!res3) { 
+						exit ($query3); 
+					}
+					
 					$product_id=($result2['id'])?$result2['id']:0;						
 					if ($result['id']) {
 						$query="UPDATE prices SET
@@ -74,8 +81,8 @@
 						$res=mysql_query($query);							
 						if (!$res) {
 							exit ($query);
-						}
-						echo "<p style='color:#336699;'>Товар: ".$data[3]." - обновлен</p>";						
+						}					
+						echo "<p style='color:#336699;'>Товар: ".$data[3]." - обновлен</p>";	
 					}
 					else {						
 						$query="INSERT INTO prices (

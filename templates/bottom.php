@@ -19,9 +19,9 @@
 				<br style="clear:both;">
 				
 				<div class="search">
-					<form action="search.php"  method="GET" />
-						<input type="search" required name="search" placeholder="Поиск по товарам">
-						<input type="submit" value="Найти">
+					<form class="form-inline" action="search.php"  method="GET" />
+						<input class="form-control" type="search" required name="search" placeholder="Поиск по товарам">
+						<input class="btn btn-default" type="submit" value="Найти">
 					</form>
 				</div>
 			
