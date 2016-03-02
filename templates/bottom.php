@@ -18,6 +18,13 @@
 				
 				<br style="clear:both;">
 				
+				<div class="search">
+					<form action="search.php"  method="GET" />
+						<input type="search" required name="search" placeholder="Поиск по товарам">
+						<input type="submit" value="Найти">
+					</form>
+				</div>
+			
 				<div class="pogoda_menu">
 				  <button type="button" class="btn btn-default btn-primary" data-title="minsk">Погода в Минске</button>
 				  <button type="button" class="btn btn-default" data-title="moskva">Погода в Москве</button>

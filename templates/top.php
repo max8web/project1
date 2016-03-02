@@ -16,6 +16,7 @@
 		<script src="media/js/jquery-2.2.0.min.js"></script>
 		<script src="media/bootstrap/js/bootstrap.min.js"></script>
 		<script src="media/js/my.js"></script>
+		<script src="media/js/product.js"></script>
 	</head>
 	<body>
 	<div class="wrapper">
@@ -23,6 +24,9 @@
 			<a href="/">
 				<img src="media/img/logo.png" class="logo" />
 			</a>
+			
+
+			
 			<div class="auth">
 				<a href="basket.php">Корзина</a>
 				<?php if ($_SESSION['id']) { ?>
@@ -32,6 +36,7 @@
 					<a href="login.php">Вход</a>
 				<?php } ?>
 			</div>
+
 			<div class="logotext">
 				<h1>Разработка сайтов на PHP</h1>
 				<p><?=$title_name;?></p>
@@ -41,9 +46,9 @@
 		<nav class="topmenu">
 			<a href="/" data-url="media/img/fon.jpg" data-title="">Главная</a>
 			<a href="index.php?url=about_company" data-url="media/img/fon2.jpg" data-title="О Компании">О компании</a>
-			<a href="works.php" data-url="../media/img/fon3.jpg" data-title="Наши работы">Наши работы</a>
-			<a href="index.php?url=vacancy" data-url="../media/img/fon4.jpg" data-title="Вакансии">Вакансии</a>
-			<a href="index.php?url=contacts" data-url="../media/img/fon5.jpg" data-title="Контакты">Контакты</a>
+			<a href="works.php" data-url="media/img/fon3.jpg" data-title="Наши товары">Наши товары</a>
+			<a href="index.php?url=vacancy" data-url="media/img/fon4.jpg" data-title="Вакансии">Вакансии</a>
+			<a href="index.php?url=contacts" data-url="media/img/fon5.jpg" data-title="Контакты">Контакты</a>
 		</nav>
 		<div class="main">			
 
