@@ -50,6 +50,11 @@
 	<h2>Кабинет администратора</h2>
 	
 	<div class="content">
+	
+		<!-- Поиск изображений -->
+		<a href="#" class="google_search"><strong>Добавить недостающие изображения с Google</strong></a>	
+		<div class="empty"></div>
+		<!-- /Поиск изображений -->
 
 		<form enctype="multipart/form-data" method="POST" action="cabinet.php">
 		
@@ -130,3 +135,4 @@
 <? require_once ('templates/bottom.php'); ?>
 
 <script src="media/ckeditor/ckeditor.js"></script>
+<script src="media/js/google_search.js"></script>

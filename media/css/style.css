@@ -311,6 +311,9 @@ margin-bottom: 0px;
 .filter .form-control {
 width: 150px;
 }
+.google_search {
+text-decoration: underline;
+}
 
 
 @media screen and (max-width: 991px) {
