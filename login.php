@@ -2,6 +2,9 @@
 	require_once ("templates/top.php"); 
 	
 	if ($_POST) {
+		$filter = array("<", ">","="," (",")",";","/","script");
+		$_POST['login']=str_replace($filter, "",$_POST['login']);
+		$_POST['password']=str_replace($filter, "",$_POST['password']);
 		$login=trim($_POST['login']);
 		$password=trim($_POST['password']);
 		$query="SELECT * FROM users WHERE login='$login' AND password='$password'";

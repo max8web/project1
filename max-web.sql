@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Мар 09 2016 г., 12:52
--- Версия сервера: 5.5.38-log
--- Версия PHP: 5.5.13
+-- Хост: 127.0.0.1:3306
+-- Время создания: Мар 09 2016 г., 21:52
+-- Версия сервера: 5.5.45
+-- Версия PHP: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `putdate` date NOT NULL,
   `api_url` tinytext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=78 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
 
 --
 -- Дамп данных таблицы `products`

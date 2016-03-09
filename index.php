@@ -1,7 +1,9 @@
 <? 
 	require_once ("templates/top.php"); 
 	
+	$filter = array("<", ">","=","(",")",";","script","union","select","from","where","'");	
 	$file=(isset($_GET['url']))?$_GET['url']:'index';	
+	$file=str_replace($filter, "",$file);
 	$query="SELECT * FROM maintexts WHERE url='$file'";
 	//print_r ($query);
 	$adr=mysql_query($query);

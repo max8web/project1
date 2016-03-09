@@ -1,6 +1,9 @@
 <? 
 	require_once ("templates/top.php"); 
 	
+	$filter = array("<", ">","="," (",")",";","/","script");
+	$_GET['search']=str_replace($filter, "",$_GET['search']);
+	
 	if (!$_POST) {
 		$name=(isset($_GET['search']))?trim($_GET['search']):'';
 		$query="SELECT * FROM products WHERE name like '%".$name."%' LIMIT 50";

@@ -6,8 +6,9 @@
 	// добавление новых товаров
 	if($_POST) {
 		$error=array();
-		$_POST['name']=str_replace('script','<span>script</span>',$_POST['name']);
-		$_POST['body']=str_replace('script','<span>script</span>',$_POST['body']);
+		$filter = array("<", ">","="," (",")",";","/","script");
+		$_POST['name']=str_replace($filter, "",$_POST['name']);
+		$_POST['body']=str_replace($filter, "",$_POST['body']);
 		$_POST['vip']=(int)$_POST['vip'];
 		$name=trim($_POST['name']);
 		$body=trim($_POST['body']);
