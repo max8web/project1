@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Мар 04 2016 г., 13:02
+-- Время создания: Мар 09 2016 г., 12:52
 -- Версия сервера: 5.5.38-log
 -- Версия PHP: 5.5.13
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `putdate` date NOT NULL,
   `api_url` tinytext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=78 ;
 
 --
 -- Дамп данных таблицы `products`

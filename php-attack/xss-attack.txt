@@ -1,0 +1,5 @@
+<script> 	$(function() { 		$("a").attr("href","http://site.com"); 	}); </script>
+
+/php-include/index.php?url=picture.png&cmd=calc
+
+c:\OpenServer\modules\database\MySQL-5.1\bin\mysql.exe --user=root password= help

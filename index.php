@@ -3,6 +3,7 @@
 	
 	$file=(isset($_GET['url']))?$_GET['url']:'index';	
 	$query="SELECT * FROM maintexts WHERE url='$file'";
+	//print_r ($query);
 	$adr=mysql_query($query);
 	if (!$adr) {
 		exit ('no query');
